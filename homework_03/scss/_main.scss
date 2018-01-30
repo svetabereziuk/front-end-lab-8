@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $wrapperBackground;
+}
+
+#content {
+    max-width: 960px;
+    margin: 8px auto;
+    padding: 20px;
+    background: $contentBackground;
+}
+
+h1, 
+h2 {
+    font-family: $headersFontFamily;
+    color: $headersColor;
+}
+
+h1 {
+    padding-bottom: 21px;
+    text-align: center;
+    text-transform: $haderTextTransform;
+}
+
+h2 {
+    padding-bottom: 20px;
+}
+
+p {
+    padding-bottom: 16px;
+    color: $textMainColor;
+}
+
+a {
+    color: $linksColor;
+}
+
+// Mixin for images border
+@mixin imgBorder($floatPosition, $borderColor) {
+    float: $floatPosition;
+    padding: 2px;
+    border: 2px solid $borderColor;
+}
+
+.img-left {
+    margin-right: 20px;
+    @include imgBorder(left, $imgBorderColor);
+}
+
+.img-right {
+    margin-left: 20px;
+     @include imgBorder(right, $imgBorderColor);
+}
+
+
+@mixin briefStyle ($width, $float, $marginRight, $marginBottom, $padding, $background, $color) {
+    max-width: $width;
+    float: $float;
+    margin-right: $marginRight;
+    margin-bottom: $marginBottom;
+    padding: $padding;
+    background: $briefTextBackground;
+    color: $briefTextColor;
+}
+
+.brief {
+    @include briefStyle($briefWidth, $briefFloat, $briefMarginRight, $briefMarginBottom, $briefPadding, $briefTextBackground, $briefTextColor);
+}
+
+table {
+    width: 93.5%;
+    margin-bottom: 60px;
+    border-spacing: 0px;
+    color: $tableTextColor;
+
+    & caption {
+        text-align: right;
+        color: $tableCaptionColor;
+    }
+
+    & tr {
+        background: $tableRowBackground;
+        
+        & th {
+            padding: 11px 0 10px 20px;
+            text-align: left;
+            font-weight: normal;
+            text-transform: uppercase;
+            border-right: 1px solid $tableHeaderRigthBorder;
+            background: $tableHeaderBackground;
+            color: $tableHeaderColor;
+        }
+
+        & th:last-child {
+            border-right: 0;
+        }
+
+        & td {
+            padding: 10px 6px 10px 20px;
+            border-bottom: 1px solid $tableRowBottomBorder;
+        }
+    }
+}
+
+
+@mixin formBorderStyler($borderColor) {
+    border: 1px solid $borderColor;
+}
+
+form {
+    margin-top: -1px;
+    margin-right: -10px;
+
+    & div {
+        margin-bottom: 15px;
+    }
+
+    & p {
+        padding-bottom: 0;
+        text-transform: uppercase;
+        color: $formTextColor;
+    }
+
+    ::-webkit-input-placeholder {
+        padding-left: 5px;
+    }
+
+    & input[type="text"], textarea {
+        @include formBorderStyler($formInputBorderColor);
+    }
+
+    & input[type="text"] {
+        width: 100%;
+        margin-top: 5px;
+        height: 25px;
+    }
+
+    & .name,
+      .second-name {
+        width: 49%;
+        display: inline-block;
+
+        & input[type="text"] {
+            padding-right: 6px;
+        }
+    }
+
+    & .second-name {
+        margin-left: 10px;
+    }
+        
+	& textarea {
+		width: 99.5%;
+		height: 150px;
+		margin-top: 5px;
+		padding: 5px 5px 5px 0;
+	}
+
+
+    & button {
+        margin-top: 5px;
+        padding: 10px 63px;
+        font-size: 20px;
+        text-transform: uppercase;
+        @include formBorderStyler($buttonBordersColor);
+        background: $buttonBackground;
+        color: $buttonTextColor;
+        cursor: pointer;
+
+        &:hover {
+            transition: linear .2s;
+            background: $buttonBackgroundHover;
+            color: $buttonTextColorHover;
+        }
+    }
+}

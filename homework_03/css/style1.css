@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #dcbb9a; }
+
+#content {
+  max-width: 960px;
+  margin: 8px auto;
+  padding: 20px;
+  background: #ffffff; }
+
+h1,
+h2 {
+  font-family: "Times New Roman", serif;
+  color: #893c00; }
+
+h1 {
+  padding-bottom: 21px;
+  text-align: center;
+  text-transform: none; }
+
+h2 {
+  padding-bottom: 20px; }
+
+p {
+  padding-bottom: 16px;
+  color: #000000; }
+
+a {
+  color: #3d70a1; }
+
+.img-left {
+  margin-right: 20px;
+  float: left;
+  padding: 2px;
+  border: 2px solid #893c00; }
+
+.img-right {
+  margin-left: 20px;
+  float: right;
+  padding: 2px;
+  border: 2px solid #893c00; }
+
+.brief {
+  max-width: 384px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 0;
+  padding: 20px;
+  background: #fadcba;
+  color: #000000; }
+
+table {
+  width: 93.5%;
+  margin-bottom: 60px;
+  border-spacing: 0px;
+  color: #000000; }
+  table caption {
+    text-align: right;
+    color: #000000; }
+  table tr {
+    background: #ffffff; }
+    table tr th {
+      padding: 11px 0 10px 20px;
+      text-align: left;
+      font-weight: normal;
+      text-transform: uppercase;
+      border-right: 1px solid #ffffff;
+      background: #e0e0e0;
+      color: #000000; }
+    table tr th:last-child {
+      border-right: 0; }
+    table tr td {
+      padding: 10px 6px 10px 20px;
+      border-bottom: 1px solid #e0e0e0; }
+
+form {
+  margin-top: -1px;
+  margin-right: -10px; }
+  form div {
+    margin-bottom: 15px; }
+  form p {
+    padding-bottom: 0;
+    text-transform: uppercase;
+    color: #808080; }
+  form ::-webkit-input-placeholder {
+    padding-left: 5px; }
+  form input[type="text"], form textarea {
+    border: 1px solid #e0e0e0; }
+  form input[type="text"] {
+    width: 100%;
+    margin-top: 5px;
+    height: 25px; }
+  form .name,
+  form .second-name {
+    width: 49%;
+    display: inline-block; }
+    form .name input[type="text"],
+    form .second-name input[type="text"] {
+      padding-right: 6px; }
+  form .second-name {
+    margin-left: 10px; }
+  form textarea {
+    width: 99.5%;
+    height: 150px;
+    margin-top: 5px;
+    padding: 5px 5px 5px 0; }
+  form button {
+    margin-top: 5px;
+    padding: 10px 63px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid #3d70a1;
+    background: #ffffff;
+    color: #3d70a1;
+    cursor: pointer; }
+    form button:hover {
+      transition: linear .2s;
+      background: #3d70a1;
+      color: #ffffff; }
