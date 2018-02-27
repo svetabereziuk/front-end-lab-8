@@ -1,0 +1,54 @@
+body {
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+  }
+  
+  p {
+	margin: 0;
+  }
+  
+  ul {
+	padding-left: 12px;
+  }
+  
+  ul,
+  li,
+  span {
+	display: block;
+	min-width: 80%;
+  }
+  
+  li {
+	list-style-type: none;
+  }
+  
+  span:hover {
+	background-color: #ebdede;
+  }
+  
+  i {
+	position: relative;
+	top: 5px;
+  }
+  
+  .folder i {
+	color: #ffa500;
+  }
+  
+  .file i {
+	color: #9c9c9c;
+  }
+  
+  .hidden {
+	display: none;
+  }
+  
+  .empty {
+	font-style: italic;
+	display: none;
+  }
+  
+  span.empty:hover {
+	background-color: #fff;
+  }
